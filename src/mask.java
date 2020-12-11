@@ -41,11 +41,14 @@ public class mask {
 	public mask(JProgressBar progressBar) throws Exception {
 		progB = progressBar;	
 		createCatalog(cl);
+		System.out.println("Create catalog");
 		StringBuilder[] feedbackCheck = 
 				new StringBuilder[cl.getActualMaximum(Calendar.DAY_OF_MONTH)];
 		for (int i=0;i<feedbackCheck.length;i++) { feedbackCheck[i] = new StringBuilder(); }
 		createExcel(cl,feedbackCheck);
-		createWord(cl,feedbackCheck);		
+		System.out.println("Create excel files");
+		createWord(cl,feedbackCheck);
+		System.out.println("Create word files");
 	}
 
 	
